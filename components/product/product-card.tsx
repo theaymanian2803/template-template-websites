@@ -3,8 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Star, ShoppingCart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Product } from '@/types'
 
-function ProductCard({ product }) {
+function ProductCard({ product }: { product: Product }) {
   return (
     <div>
       <div
