@@ -6,10 +6,17 @@ const prisma = new PrismaClient()
 async function main() {
   // 1. Clear existing data to avoid duplicates
   await prisma.product.deleteMany()
+  await prisma.account.deleteMany()
+  await prisma.session.deleteMany()
+  await prisma.verificationToken.deleteMany()
+  await prisma.user.deleteMany()
 
   // 2. Insert new data
   await prisma.product.createMany({
     data: sampleData.products,
+  })
+  await prisma.user.createMany({
+    data: sampleData.users,
   })
 
   console.log('Database seeded successfully')
