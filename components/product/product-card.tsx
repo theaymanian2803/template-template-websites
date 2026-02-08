@@ -19,7 +19,7 @@ function ProductCard({ product }: { product: Product }) {
           {/* Badge: Featured or Out of Stock */}
           {product.stock === 0 ? (
             <span className="absolute left-3 top-3 z-20 rounded-full bg-red-500/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
-              Sold Out
+              Sold Out / wainting for a refill
             </span>
           ) : product.isFeatured ? (
             <span className="absolute left-3 top-3 z-20 rounded-full bg-indigo-500/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
