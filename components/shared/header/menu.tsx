@@ -11,6 +11,7 @@ import {
 import { Separator } from '@/components/ui/separator' // Assuming you have this, if not, use <hr className="my-4" />
 import Link from 'next/link'
 import ModeToggle from './mode-toggle'
+import UserButton from './user-button'
 
 const Menu = () => {
   // Mock cart count for visual demo
@@ -41,12 +42,7 @@ const Menu = () => {
           </Link>
         </Button>
         {/* Sign In - Primary Action */}
-        <Button asChild className="rounded-full px-6 transition-transform active:scale-95">
-          <Link href="/sign-in">
-            <UserIcon className="mr-2 h-4 w-4" />
-            <span>Sign In</span>
-          </Link>
-        </Button>
+        <UserButton />
       </nav>
 
       {/* -------------------------------
@@ -86,12 +82,7 @@ const Menu = () => {
                 Menu
               </p>
 
-              <Button asChild variant="ghost" className="justify-start h-12 text-base font-medium">
-                <Link href="/sign-in">
-                  <LogIn className="mr-3 h-5 w-5 text-muted-foreground" />
-                  Sign In / Register
-                </Link>
-              </Button>
+              <UserButton />
 
               <Button asChild variant="ghost" className="justify-start h-12 text-base font-medium">
                 <Link href="/cart">
